@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee table</title>
+
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+            font-size: 100%;
+			width: 80%;
+			margin: 1em auto;
+		}
+
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			border: 2px solid gray;
+		}
+
+		caption {
+			font-size: 180%;
+			font-weight: bold;
+			padding: .5em;
+		}
+
+		thead {
+			background-color: lightgreen;
+		}
+
+		th,
+		td {
+			border: 1px solid gray;
+			padding: .35em .75em;
+			text-align: left;
+			vertical-align: middle;
+		}
+
+		tbody tr:nth-child(even) td {
+			background-color: lightgrey;
+		}
+
+		td:last-child,
+		th:last-child {
+			text-align: right;
+		}
+
+		tbody td:first-child {
+			font-weight: bold;
+		}
+
+		tfoot {
+			background-color: lightgreen;
+			font-weight: bold;
+		}
+
+		tfoot td:last-child {
+			text-align: right;
+		}
+
+		/* ===== MOBILE ===== */
+		@media only screen and (max-width: 640px) {
+
+			thead {
+				display: none;
+			}
+
+			table,
+			tbody,
+			tr,
+			td,
+			tfoot {
+				display: block;
+				width: 100%;
+			}
+
+			tr {
+				margin-bottom: 0;
+			}
+
+			td {
+				border: 1px solid gray;
+			}
+
+			td:first-child {
+				background-color: lightgreen;
+				font-weight: bold;
+			}
+
+			td:nth-child(3)::before {
+				content: "Years of Service: ";
+				display: block;
+				font-weight: normal;
+				float: left;
+			}
+
+			td:nth-child(3) {
+				text-align: right;
+			}
+
+			tfoot td::before {
+				content: "";
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+<table>
+
+	<caption>Employee Table</caption>
+
+	<thead>
+		<tr>
+			<th>Department</th>
+			<th>Name</th>
+			<th>E-mail</th>
+			<th>Years of Service</th>
+		</tr>
+	</thead>
+
+	<tbody>
+
+		<tr>
+			<td>Editorial</td>
+			<td>Joel Murach</td>
+			<td>joelmurach@yahoo.com</td>
+			<td>22</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td>Anne Boehm</td>
+			<td>anne@murach.com</td>
+			<td>34</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td>Zak Ruvalcaba</td>
+			<td>zak@modulemedia.com</td>
+			<td>4</td>
+		</tr>
+
+		<tr>
+			<td>Marketing</td>
+			<td>Judy Taylor</td>
+			<td>judy@murach.com</td>
+			<td>39</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td>Bethany Lee</td>
+			<td>bethany@murach.com</td>
+			<td>10</td>
+		</tr>
+
+		<tr>
+			<td>Customer Service</td>
+			<td>Kelly Slivkoff</td>
+			<td>kelly@murach.com</td>
+			<td>25</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td>Juliette Baylon</td>
+			<td>juliette@murach.com</td>
+			<td>1</td>
+		</tr>
+
+	</tbody>
+
+	<tfoot>
+		<tr>
+			<td colspan="3">Total Years of Service:</td>
+			<td>105</td>
+		</tr>
+	</tfoot>
+
+</table>
+
+</body>
+</html>
