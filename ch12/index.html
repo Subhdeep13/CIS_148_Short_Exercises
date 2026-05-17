@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete a Form</title>
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+<h1>Please complete our survey</h1>
+
+<form action="confirmation.html" method="post">
+
+	<fieldset>
+		<legend>Contact information</legend>
+
+		<label for="email">Email address:</label>
+		<input type="email" id="email" name="email"
+			accesskey="e" autofocus required>
+
+		<label for="fname">First name:</label>
+		<input type="text" id="fname" name="fname"
+			accesskey="f" required>
+
+		<label for="lname">Last name:</label>
+		<input type="text" id="lname" name="lname"
+			accesskey="l" required>
+	</fieldset>
+
+	<fieldset>
+		<legend>Geographic information</legend>
+
+		<label for="state">State:</label>
+		<input type="text" id="state" name="state"
+			placeholder="Two characters"
+			pattern="[A-Za-z]{2}"
+			required>
+
+		<label for="zip">Zip code:</label>
+		<input type="text" id="zip" name="zip"
+			placeholder="Five digits"
+			pattern="[0-9]{5}"
+			required>
+	</fieldset>
+
+	<fieldset>
+		<legend>Source</legend>
+
+		<label for="source">How did you hear about us?</label>
+
+		<select id="source" name="source">
+			<option>Web Search</option>
+			<option>Friend</option>
+			<option>Advertisement</option>
+			<option>Social Media</option>
+		</select>
+
+		<label for="comments">Additional comments:</label>
+
+		<textarea id="comments" name="comments"
+			placeholder="Add any additional comments here."></textarea>
+	</fieldset>
+
+	<div class="buttons">
+		<button type="submit" class="button submit-btn">
+			Submit
+		</button>
+
+		<button type="reset" class="button reset-btn">
+			Reset
+		</button>
+	</div>
+
+</form>
+
+</body>
+</html>
