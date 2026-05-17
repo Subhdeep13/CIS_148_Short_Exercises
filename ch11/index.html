@@ -1,106 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee table</title>
-
+	<title>Employee table</title>
 	<style>
 		body {
 			font-family: Arial, Helvetica, sans-serif;
-            font-size: 100%;
+			font-size: 100%;
 			width: 80%;
 			margin: 1em auto;
 		}
 
 		table {
 			border-collapse: collapse;
+			border: 1px solid black;
 			width: 100%;
-			border: 2px solid gray;
 		}
 
 		caption {
-			font-size: 180%;
+			font-size: 160%;
 			font-weight: bold;
-			padding: .5em;
+			padding-bottom: .5em;
 		}
 
-		thead {
+		thead, tfoot {
 			background-color: lightgreen;
+			font-weight: bold;
 		}
 
-		th,
-		td {
-			border: 1px solid gray;
-			padding: .35em .75em;
+		th, td {
+			border: 1px solid black;
+			padding: .35em .5em;
 			text-align: left;
-			vertical-align: middle;
 		}
 
 		tbody tr:nth-child(even) td {
-			background-color: lightgrey;
+			background-color: lightgray;
 		}
 
-		td:last-child,
-		th:last-child {
+		td:last-child, th:last-child {
 			text-align: right;
 		}
 
-		tbody td:first-child {
+		td:first-child {
 			font-weight: bold;
 		}
 
-		tfoot {
-			background-color: lightgreen;
-			font-weight: bold;
-		}
-
-		tfoot td:last-child {
-			text-align: right;
-		}
-
-		/* ===== MOBILE ===== */
 		@media only screen and (max-width: 640px) {
+			body {
+				width: 90%;
+			}
+
+			table, caption, tbody, tr, td, tfoot {
+				display: block;
+				width: 100%;
+			}
 
 			thead {
 				display: none;
 			}
 
-			table,
-			tbody,
-			tr,
-			td,
-			tfoot {
-				display: block;
-				width: 100%;
+			table {
+				border-collapse: separate;
+				border-spacing: 0;
 			}
 
 			tr {
-				margin-bottom: 0;
+				border-left: 1px solid black;
+				border-right: 1px solid black;
 			}
 
 			td {
-				border: 1px solid gray;
+				box-sizing: border-box;
+				border-left: 1px solid black;
+				border-right: 1px solid black;
+				text-align: left !important;
+				overflow-wrap: anywhere;
 			}
 
 			td:first-child {
-				background-color: lightgreen;
-				font-weight: bold;
+				background-color: lightgreen !important;
 			}
 
-			td:nth-child(3)::before {
-				content: "Years of Service: ";
+			td:first-child:empty {
+				display: none;
+			}
+
+			td:nth-child(4)::before {
+				content: "Years of Service:";
 				display: block;
-				font-weight: normal;
 				float: left;
 			}
 
-			td:nth-child(3) {
-				text-align: right;
+			td:nth-child(4) {
+				text-align: right !important;
 			}
 
-			tfoot td::before {
-				content: "";
+			tfoot td {
+				background-color: lightgreen;
+				border: 1px solid black;
+				box-sizing: border-box;
+			}
+
+			tfoot td:last-child {
+				text-align: right !important;
 			}
 		}
 	</style>
@@ -109,7 +113,6 @@
 <body>
 
 <table>
-
 	<caption>Employee Table</caption>
 
 	<thead>
@@ -122,56 +125,48 @@
 	</thead>
 
 	<tbody>
-
 		<tr>
 			<td>Editorial</td>
 			<td>Joel Murach</td>
 			<td>joelmurach@yahoo.com</td>
 			<td>22</td>
 		</tr>
-
 		<tr>
 			<td></td>
 			<td>Anne Boehm</td>
 			<td>anne@murach.com</td>
 			<td>34</td>
 		</tr>
-
 		<tr>
 			<td></td>
 			<td>Zak Ruvalcaba</td>
 			<td>zak@modulemedia.com</td>
 			<td>4</td>
 		</tr>
-
 		<tr>
 			<td>Marketing</td>
 			<td>Judy Taylor</td>
 			<td>judy@murach.com</td>
 			<td>39</td>
 		</tr>
-
 		<tr>
 			<td></td>
 			<td>Bethany Lee</td>
 			<td>bethany@murach.com</td>
 			<td>10</td>
 		</tr>
-
 		<tr>
 			<td>Customer Service</td>
 			<td>Kelly Slivkoff</td>
 			<td>kelly@murach.com</td>
 			<td>25</td>
 		</tr>
-
 		<tr>
 			<td></td>
 			<td>Juliette Baylon</td>
 			<td>juliette@murach.com</td>
 			<td>1</td>
 		</tr>
-
 	</tbody>
 
 	<tfoot>
@@ -180,7 +175,6 @@
 			<td>105</td>
 		</tr>
 	</tfoot>
-
 </table>
 
 </body>
